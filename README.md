@@ -34,3 +34,22 @@ cat wallet.json | npx wrangler secret put SOLANA_PRIVATE_KEY
 # Run
 python3 arena_simulator.py
 ```
+
+# BotHire Nexus Core
+
+BotHire Nexus Core is an autonomous AI compute bidding and settlement engine. It features a multi-agent arena where different AI strategies compete for resources, with all settlements finalized on-chain (simulated) and persisted via Cloudflare D1.
+
+BotHire Nexus Core 是一個自動化 AI 算力競標與結算引擎。它具備多代理競技場模式，讓不同的 AI 策略競爭資源，並透過 Cloudflare D1 進行共識結算與紀錄。
+
+## 🎬 Live Demo (v2.8 Stable)
+
+By running `./run_arena.sh`, the system initiates a concurrent bidding session:
+
+```bash
+🤖 [Agent Agent_Aggressive] Strategy: aggressive -> Bid: 0.1426 SOL
+🤖 [Agent Agent_Patient] Strategy: patient -> Bid: 0.1152 SOL
+🤖 [Agent Agent_Standard] Strategy: normal -> Bid: 0.1394 SOL
+
+📢 [Worker] Agent_Standard: ACCEPTED (Price: 0.1394 SOL)
+📢 [Worker] Agent_Patient: ACCEPTED (Price: 0.1152 SOL)
+📢 [Worker] Agent_Aggressive: ACCEPTED (Price: 0.1426 SOL)
